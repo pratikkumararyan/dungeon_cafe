@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://dvhs5ygscknd"]
 
 [ext_resource type="PackedScene" uid="uid://r2jmbdn0pt1" path="res://Scenes/environment.tscn" id="1_c6y6c"]
+[ext_resource type="PackedScene" uid="uid://bwumulnf2mbw4" path="res://Scenes/player.tscn" id="2_unpil"]
 
 [node name="Node2D" type="Node2D" unique_id=1060321192]
+scale = Vector2(3, 3)
 
 [node name="Environment" parent="." unique_id=541352945 instance=ExtResource("1_c6y6c")]
 position = Vector2(161, 148)
+
+[node name="player" parent="." unique_id=708398039 instance=ExtResource("2_unpil")]
+position = Vector2(161.66667, 239)
+scale = Vector2(0.8, 0.8)

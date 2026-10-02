@@ -597,7 +597,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idleForward",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -806,5 +806,7 @@ shape = SubResource("RectangleShape2D_v0iea")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=239077366]
 sprite_frames = SubResource("SpriteFrames_s7wsd")
-animation = &"idleRight"
-frame_progress = 0.6901982
+animation = &"idleForward"
+autoplay = "idleForward"
+frame = 3
+frame_progress = 0.80264777
