@@ -1,24 +1,9 @@
 [gd_scene format=3 uid="uid://dvhs5ygscknd"]
 
-[ext_resource type="Texture2D" uid="uid://c6onwfjqhyrh8" path="res://Assets/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at.png" id="1_m4rby"]
-[ext_resource type="Texture2D" uid="uid://c7gag3y23qv4r" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="2_36hkq"]
-[ext_resource type="Texture2D" uid="uid://djd7uo7mq8g4a" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/demonstration.png" id="3_6juqn"]
-[ext_resource type="Texture2D" uid="uid://ddljx03e1u3xu" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Character.png" id="4_bcjpy"]
+[ext_resource type="PackedScene" uid="uid://r2jmbdn0pt1" path="res://Scenes/environment.tscn" id="1_c6y6c"]
 
-[node name="Node2D" type="Node2D" unique_id=1021042419]
+[node name="Node2D" type="Node2D" unique_id=1060321192]
 
-[node name="DungeonTilesetAt" type="Sprite2D" parent="." unique_id=1493117183]
-position = Vector2(-428, 51)
-texture = ExtResource("1_m4rby")
-
-[node name="DungeonTileset" type="Sprite2D" parent="." unique_id=214118387]
-position = Vector2(234, -70)
-texture = ExtResource("2_36hkq")
-
-[node name="Demonstration" type="Sprite2D" parent="." unique_id=1854570009]
-position = Vector2(32, 64)
-texture = ExtResource("3_6juqn")
-
-[node name="DungeonCharacter" type="Sprite2D" parent="." unique_id=986792883]
-position = Vector2(16, -55)
-texture = ExtResource("4_bcjpy")
+[node name="Environment" parent="." unique_id=541352945 instance=ExtResource("1_c6y6c")]
+position = Vector2(476, 437)
+scale = Vector2(3, 3)
