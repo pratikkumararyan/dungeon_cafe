@@ -5,5 +5,4 @@
 [node name="Node2D" type="Node2D" unique_id=1060321192]
 
 [node name="Environment" parent="." unique_id=541352945 instance=ExtResource("1_c6y6c")]
-position = Vector2(476, 437)
-scale = Vector2(3, 3)
+position = Vector2(161, 148)
