@@ -799,18 +799,30 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xagnb"]
+radius = 16.124516
+
 [node name="Player" type="CharacterBody2D" unique_id=708398039]
 script = ExtResource("1_vgqql")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=578693703]
+[node name="hitbox" type="CollisionShape2D" parent="." unique_id=578693703]
 position = Vector2(0.5, 2)
 shape = SubResource("RectangleShape2D_v0iea")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=239077366]
 sprite_frames = SubResource("SpriteFrames_s7wsd")
-animation = &"runRight"
+animation = &"attackLeft"
 autoplay = "idleForward"
+frame = 5
+frame_progress = 0.15908873
 
 [node name="Cooldown" type="Timer" parent="." unique_id=776738162]
 wait_time = 0.2
 one_shot = true
+
+[node name="AttackRange" type="Area2D" parent="." unique_id=677873926]
+position = Vector2(-7, 0)
+metadata/_edit_group_ = true
+
+[node name="Radi" type="CollisionShape2D" parent="AttackRange" unique_id=436254667]
+shape = SubResource("CircleShape2D_xagnb")
