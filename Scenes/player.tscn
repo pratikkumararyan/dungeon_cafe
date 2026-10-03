@@ -810,4 +810,4 @@ shape = SubResource("RectangleShape2D_v0iea")
 sprite_frames = SubResource("SpriteFrames_s7wsd")
 animation = &"idleRight"
 autoplay = "idleForward"
-frame_progress = 0.15658264
+frame_progress = 0.13370061

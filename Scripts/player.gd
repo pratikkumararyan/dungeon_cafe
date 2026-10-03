@@ -22,7 +22,7 @@ func _process_movement():
 	
 func _process_animation(direction: Vector2):
 	if velocity != Vector2.ZERO:
-		play_animation("walk", direction)
+		play_animation("run", direction)
 	else:
 		play_animation("idle", direction)
 
