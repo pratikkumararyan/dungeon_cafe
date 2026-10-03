@@ -7,8 +7,8 @@
 scale = Vector2(3, 3)
 
 [node name="Environment" parent="." unique_id=541352945 instance=ExtResource("1_c6y6c")]
-position = Vector2(161, 148)
+position = Vector2(73.66666, 68.333336)
 
 [node name="player" parent="." unique_id=708398039 instance=ExtResource("2_unpil")]
-position = Vector2(161.66667, 239)
+position = Vector2(73.66667, 170)
 scale = Vector2(0.8, 0.8)
