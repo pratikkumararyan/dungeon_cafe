@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cvopi3k01y5nu" path="res://Assets/Enemy_Animations_Set/enemies-skeleton1_attack.png" id="1_pegji"]
 [ext_resource type="Texture2D" uid="uid://bc3gd4u6foufc" path="res://Assets/Enemy_Animations_Set/enemies-skeleton1_death.png" id="2_5abox"]
+[ext_resource type="Texture2D" uid="uid://va2j2j3ahjor" path="res://Assets/Enemy_Animations_Set/enemies-skeleton1_take_damage.png" id="3_5abox"]
 [ext_resource type="Texture2D" uid="uid://ypw1vwi45b7a" path="res://Assets/Enemy_Animations_Set/enemies-skeleton1_idle.png" id="3_v8sxu"]
 [ext_resource type="Texture2D" uid="uid://ce1di7wuqgskq" path="res://Assets/Enemy_Animations_Set/enemies-skeleton1_movement.png" id="4_ks230"]
 
@@ -111,6 +112,26 @@ region = Rect2(480, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_x7hgc"]
 atlas = ExtResource("2_5abox")
 region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8sxu"]
+atlas = ExtResource("3_5abox")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ks230"]
+atlas = ExtResource("3_5abox")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80afr"]
+atlas = ExtResource("3_5abox")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ar42f"]
+atlas = ExtResource("3_5abox")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsi3d"]
+atlas = ExtResource("3_5abox")
+region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06y4e"]
 atlas = ExtResource("3_v8sxu")
@@ -268,6 +289,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_v8sxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ks230")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80afr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ar42f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsi3d")
+}],
+"loop": 1,
+"name": &"hit",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_06y4e")
 }, {
 "duration": 1.0,
@@ -335,7 +376,7 @@ shape = SubResource("RectangleShape2D_sfdtf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=875241581]
 sprite_frames = SubResource("SpriteFrames_685vx")
-animation = &"idle"
+animation = &"movement"
 autoplay = "idle"
-frame = 3
-frame_progress = 0.10751054
+frame = 6
+frame_progress = 0.4631295
