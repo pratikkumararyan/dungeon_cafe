@@ -1,8 +1,9 @@
 [gd_scene format=4 uid="uid://r2jmbdn0pt1"]
 
-[ext_resource type="Texture2D" uid="uid://c7gag3y23qv4r" path="res://Assets/Tiles/character and tileset/Dungeon_Tileset.png" id="1_km3fo"]
+[ext_resource type="Texture2D" uid="uid://c7gag3y23qv4r" path="res://Assets/Miscellaneous/character and tileset/Dungeon_Tileset.png" id="1_km3fo"]
 [ext_resource type="PackedScene" uid="uid://cjgfiew18rj8g" path="res://Scenes/skeleton.tscn" id="2_mfu5p"]
 [ext_resource type="PackedScene" uid="uid://0y8k3em2aa32" path="res://Scenes/vampire.tscn" id="3_a65fu"]
+[ext_resource type="PackedScene" uid="uid://dh7daeectm75c" path="res://Scenes/coin.tscn" id="4_ukl56"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mfu5p"]
 texture = ExtResource("1_km3fo")
@@ -146,7 +147,7 @@ tile_map_data = PackedByteArray("AAD8//r/AAADAAAAAAD9//r/AAACAAAAAAD+//r/AAABAAA
 tile_set = SubResource("TileSet_6b2n3")
 
 [node name="props" type="TileMapLayer" parent="." unique_id=624882147]
-tile_map_data = PackedByteArray("AAD//wcAAAAGAAMAAAD8//v/AAABAAkAAAD8//7/AAABAAkAAAACAPz/AAABAAkAABD+//r/AAAEAAcAAAD//wQAAAAIAAYAAAAAAAUAAAAEAAYAADAEAP//AAAJAAUAAAAKAP7/AAAIAAYAAAAJAAMAAAADAAkAAAANAAQAAAAFAAgAAAACAPv/AAAFAAYAAAD+////AAAHAAcAAAAAAPz/AAAJAAQAAAAAAAcAAAAHAAMAAAASAAMAAAAGAAMAAAATAAMAAAAHAAMAAAA=")
+tile_map_data = PackedByteArray("AAD//wcAAAAGAAMAAAD//wQAAAAIAAYAAAAAAAUAAAAEAAYAADAEAP//AAAJAAUAAAAKAP7/AAAIAAYAAAACAPv/AAAFAAYAAAD+////AAAHAAcAAAAAAPz/AAAJAAQAAAAAAAcAAAAHAAMAAAASAAMAAAAGAAMAAAATAAMAAAAHAAMAAAA=")
 tile_set = SubResource("TileSet_6b2n3")
 
 [node name="Skeleton" parent="." unique_id=1499633693 instance=ExtResource("2_mfu5p")]
@@ -155,3 +156,24 @@ position = Vector2(-54, -14)
 [node name="Vampire" parent="." unique_id=2078070 instance=ExtResource("3_a65fu")]
 position = Vector2(178, 18)
 scale = Vector2(0.75, 0.75)
+
+[node name="coin" parent="." unique_id=772351167 instance=ExtResource("4_ukl56")]
+position = Vector2(5, -71)
+
+[node name="coin2" parent="." unique_id=748354698 instance=ExtResource("4_ukl56")]
+position = Vector2(24, -71)
+
+[node name="coin3" parent="." unique_id=1486145082 instance=ExtResource("4_ukl56")]
+position = Vector2(-14, -71)
+
+[node name="coin4" parent="." unique_id=1826343605 instance=ExtResource("4_ukl56")]
+position = Vector2(-35, -71)
+
+[node name="coin5" parent="." unique_id=1963409748 instance=ExtResource("4_ukl56")]
+position = Vector2(-47, -46)
+
+[node name="coin6" parent="." unique_id=1053358129 instance=ExtResource("4_ukl56")]
+position = Vector2(-56, -36)
+
+[node name="coin7" parent="." unique_id=1025606869 instance=ExtResource("4_ukl56")]
+position = Vector2(-37, -36)

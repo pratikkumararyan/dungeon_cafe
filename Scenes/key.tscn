@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://yv25ovdnsii2"]
+
+[ext_resource type="Texture2D" uid="uid://b7loa3c2bb1ff" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_1_1.png" id="1_1fooj"]
+[ext_resource type="Texture2D" uid="uid://skk1jc0n57wn" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_1_2.png" id="2_44ier"]
+[ext_resource type="Texture2D" uid="uid://i3kl8wbjsx57" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_1_3.png" id="3_v468b"]
+[ext_resource type="Texture2D" uid="uid://dromxh7vb2u4f" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_1_4.png" id="4_0c330"]
+[ext_resource type="Texture2D" uid="uid://c5k7vms6d6pnn" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_2_1.png" id="5_30odd"]
+[ext_resource type="Texture2D" uid="uid://di072dbvmt71k" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_2_2.png" id="6_iiq8e"]
+[ext_resource type="Texture2D" uid="uid://0qsqakce1n8k" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_2_3.png" id="7_76hcf"]
+[ext_resource type="Texture2D" uid="uid://bnwhpbjxyrqy7" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_2_4.png" id="8_otcdd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7wsd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1fooj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_44ier")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v468b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0c330")
+}],
+"loop": 1,
+"name": &"goldKey",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_30odd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_iiq8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_76hcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_otcdd")
+}],
+"loop": 1,
+"name": &"silverKey",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iiq8e"]
+size = Vector2(11, 5)
+
+[node name="Area2D" type="Area2D" unique_id=772351167]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1504574128]
+sprite_frames = SubResource("SpriteFrames_s7wsd")
+animation = &"silverKey"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1324476279]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_iiq8e")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1925785143]
+visible = false
+amount = 5
+emission_shape = 3
+emission_rect_extents = Vector2(1, 1)
+spread = 180.0
+color = Color(0.96639705, 0.91654986, 0.46109095, 0.93333334)

@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dh7daeectm75c"]
+
+[ext_resource type="Texture2D" uid="uid://cmk6bj5j2wkfj" path="res://Assets/Miscellaneous/items and trap_animation/coin/coin_1.png" id="1_2l7mo"]
+[ext_resource type="Texture2D" uid="uid://b0hdjuwjmasxe" path="res://Assets/Miscellaneous/items and trap_animation/coin/coin_2.png" id="2_q30xt"]
+[ext_resource type="Texture2D" uid="uid://i7ppf4ul80rb" path="res://Assets/Miscellaneous/items and trap_animation/coin/coin_3.png" id="3_7w2r2"]
+[ext_resource type="Texture2D" uid="uid://cd33vyhdvqufl" path="res://Assets/Miscellaneous/items and trap_animation/coin/coin_4.png" id="4_tthw5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7wsd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2l7mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q30xt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7w2r2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tthw5")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bhy14"]
+radius = 4.1231055
+
+[node name="Area2D" type="Area2D" unique_id=772351167]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1504574128]
+sprite_frames = SubResource("SpriteFrames_s7wsd")
+animation = &"idle"
+frame_progress = 0.083391994
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1324476279]
+shape = SubResource("CircleShape2D_bhy14")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1925785143]
+visible = false
+amount = 5
+emission_shape = 3
+emission_rect_extents = Vector2(1, 1)
+spread = 180.0
+color = Color(0.96639705, 0.91654986, 0.46109095, 0.93333334)
