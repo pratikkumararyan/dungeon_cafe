@@ -3,17 +3,15 @@ extends CharacterBody2D
 
 enum State { IDLE, CHASE, ATTACK, HIT, DEAD }
 
-# Constants
-const KNOCKBACK_DISTANCE := 50.0
-const ATTACK_RAY_COUNT := 100
-const ATTACK_SPREAD_DEGREES := 140.0
-
 # Exported stats
 @export var health := 100
 @export var speed := 30.0
 @export var attackRange := 100.0
 @export var attackCooldown := 2.0
 @export var attackDamage := 10
+@export var KNOCKBACK_DISTANCE := 50.0
+@export var ATTACK_RAY_COUNT := 100
+@export var ATTACK_SPREAD_DEGREES := 140.0
 
 # Exported detection ranges (editable per instance)
 @export var innerRangeRadius := 150.0:
