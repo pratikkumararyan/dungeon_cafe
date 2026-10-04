@@ -186,6 +186,7 @@ position = Vector2(-54, -14)
 [node name="Vampire" parent="." unique_id=2078070 instance=ExtResource("3_a65fu")]
 position = Vector2(0, 57)
 scale = Vector2(0.75, 0.75)
+health = 100
 
 [node name="spike" parent="." unique_id=772351167 instance=ExtResource("4_ukl56")]
 position = Vector2(154, 51)
@@ -213,7 +214,7 @@ frame = 2
 frame_progress = 0.052538905
 
 [node name="key" parent="." unique_id=2120676148 instance=ExtResource("6_osnen")]
-position = Vector2(215, 73)
+position = Vector2(215, 79)
 
 [node name="arrow1" parent="." unique_id=979517052 instance=ExtResource("11_qyfso")]
 position = Vector2(31, 44)

@@ -827,5 +827,7 @@ metadata/_edit_group_ = true
 [node name="Radi" type="CollisionShape2D" parent="AttackRange" unique_id=436254667]
 shape = SubResource("CircleShape2D_xagnb")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1658385411]
+
 [connection signal="body_entered" from="AttackRange" to="." method="_on_attack_range_body_entered"]
 [connection signal="body_exited" from="AttackRange" to="." method="_on_attack_range_body_exited"]
