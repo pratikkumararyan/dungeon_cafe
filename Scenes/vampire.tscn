@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0y8k3em2aa32"]
 
 [ext_resource type="Texture2D" uid="uid://cjbosn7bm7027" path="res://Assets/Entities/Vampire/Vampires1/Idle/Vampires1_Idle_full.png" id="1_m1etx"]
-[ext_resource type="Script" uid="uid://c700bpxf7yt78" path="res://Scenes/enemy.gd" id="1_te72b"]
+[ext_resource type="Script" uid="uid://c700bpxf7yt78" path="res://Scripts/enemy.gd" id="1_te72b"]
 [ext_resource type="Texture2D" uid="uid://ddafb3a7goygq" path="res://Assets/Entities/Vampire/Vampires1/Attack/Vampires1_Attack_full.png" id="1_vowtw"]
 [ext_resource type="Texture2D" uid="uid://ivvwd08x7a47" path="res://Assets/Entities/Vampire/Vampires1/Death/Vampires1_Death_full.png" id="2_f5xx6"]
 [ext_resource type="Texture2D" uid="uid://dtp7tci1e7g4o" path="res://Assets/Entities/Vampire/Vampires1/Run/Vampires1_Run_full.png" id="3_quynd"]

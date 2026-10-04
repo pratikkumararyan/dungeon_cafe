@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://yv25ovdnsii2"]
 
 [ext_resource type="Texture2D" uid="uid://b7loa3c2bb1ff" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_1_1.png" id="1_1fooj"]
+[ext_resource type="Script" uid="uid://dnuaaoyqte1ww" path="res://Scripts/pickupable_key.gd" id="1_44ier"]
 [ext_resource type="Texture2D" uid="uid://skk1jc0n57wn" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_1_2.png" id="2_44ier"]
 [ext_resource type="Texture2D" uid="uid://i3kl8wbjsx57" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_1_3.png" id="3_v468b"]
 [ext_resource type="Texture2D" uid="uid://dromxh7vb2u4f" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_1_4.png" id="4_0c330"]
@@ -46,24 +47,21 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iiq8e"]
-size = Vector2(11, 5)
+[sub_resource type="CircleShape2D" id="CircleShape2D_uuxpa"]
+radius = 26.019224
 
-[node name="Area2D" type="Area2D" unique_id=772351167]
+[node name="Key" type="Area2D" unique_id=772351167]
+script = ExtResource("1_44ier")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1504574128]
 sprite_frames = SubResource("SpriteFrames_s7wsd")
 animation = &"silverKey"
 autoplay = "silverKey"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1324476279]
-position = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_iiq8e")
+[node name="Range" type="Area2D" parent="." unique_id=1976597857]
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1925785143]
-visible = false
-amount = 5
-emission_shape = 3
-emission_rect_extents = Vector2(1, 1)
-spread = 180.0
-color = Color(0.96639705, 0.91654986, 0.46109095, 0.93333334)
+[node name="radi" type="CollisionShape2D" parent="Range" unique_id=361694077]
+shape = SubResource("CircleShape2D_uuxpa")
+
+[connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
+[connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]
