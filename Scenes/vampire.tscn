@@ -1240,7 +1240,6 @@ size = Vector2(10, 18)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2078070 groups=["enemy"]]
 script = ExtResource("1_te72b")
-health = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=325074342 groups=["enemy"]]
 sprite_frames = SubResource("SpriteFrames_1vivr")
