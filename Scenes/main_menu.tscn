@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://c2wcbst2qam1u"]
+
+[ext_resource type="Texture2D" uid="uid://brexmhb0f5mt6" path="res://Assets/mm.png" id="1_28flt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xagnb"]
+texture = ExtResource("1_28flt")
+modulate_color = Color(0.50928617, 0.50928617, 0.50928617, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xagnb"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_xagnb"]
+font_size = 68
+
+[node name="MainMenu" type="Control" unique_id=659263511]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1673278600]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_xagnb")
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=723184200]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -496.0
+offset_top = 34.0
+offset_right = -130.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=1442359698]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_xagnb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=657137549]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_xagnb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+text = "Quit"
+
+[node name="Label" type="Label" parent="." unique_id=465456543]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 98.0
+offset_top = -166.0
+offset_right = 560.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dungeon Cafe"
+label_settings = SubResource("LabelSettings_xagnb")
