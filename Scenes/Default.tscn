@@ -17,3 +17,6 @@ scale = Vector2(0.8, 0.8)
 
 [node name="Vampire" parent="." unique_id=2078070 instance=ExtResource("3_uuxpa")]
 position = Vector2(66.333336, 26)
+motion_mode = 1
+innerRangeRadius = 50.0
+outerRangeRadius = 100.0

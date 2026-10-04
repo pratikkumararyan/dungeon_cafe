@@ -1,32 +1,59 @@
+@tool
 extends CharacterBody2D
 
 enum State { IDLE, CHASE, ATTACK, HIT, DEAD }
 
+# Constants
+const KNOCKBACK_DISTANCE := 50.0
+const ATTACK_RAY_COUNT := 100
+const ATTACK_SPREAD_DEGREES := 140.0
+
+# Exported stats
 @export var health := 100
 @export var speed := 30.0
 @export var attackRange := 100.0
 @export var attackCooldown := 2.0
 @export var attackDamage := 10
-const KNOCKBACK_DISTANCE := 50.0
 
-const ATTACK_RAY_COUNT := 100
-const ATTACK_SPREAD_DEGREES := 140.0
+# Exported detection ranges (editable per instance)
+@export var innerRangeRadius := 150.0:
+	set(value):
+		innerRangeRadius = value
+		if is_node_ready():
+			_applyRanges()
 
+@export var outerRangeRadius := 250.0:
+	set(value):
+		outerRangeRadius = value
+		if is_node_ready():
+			_applyRanges()
+
+# State
 var state := State.IDLE
 var last_direction: Vector2 = Vector2.DOWN
 var target: Node2D = null
 var canAttack := true
+var attackId := 0
 var knockbackTween: Tween
+
+# Nodes
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var inner_radi: CollisionShape2D = $innerRange/radi
-
-const DEBUG_DRAW_RAYS := true
-var debugRayHits: Array[bool] = []
+@onready var outer_radi: CollisionShape2D = $outerRange/radi
 
 func _ready() -> void:
 	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
+	inner_radi.shape = inner_radi.shape.duplicate()
+	outer_radi.shape = outer_radi.shape.duplicate()
+	_applyRanges()
+
+func _applyRanges() -> void:
+	inner_radi.shape.radius = innerRangeRadius
+	outer_radi.shape.radius = outerRangeRadius
 
 func _physics_process(delta: float) -> void:
+	if Engine.is_editor_hint():
+		return
 	queue_redraw()
 	
 	if state == State.DEAD or state == State.HIT or state == State.ATTACK:
@@ -69,8 +96,7 @@ func _draw() -> void:
 		var angle = lerp(-spreadRadians / 2.0, spreadRadians / 2.0, t)
 		var rayDirection = last_direction.rotated(angle)
 		draw_line(Vector2.ZERO, rayDirection * (attackRange / 2), Color.GHOST_WHITE, 1.0)
-		
-var attackId := 0
+
 func _attack() -> void:
 	state = State.ATTACK
 	canAttack = false
@@ -87,7 +113,6 @@ func _attack() -> void:
 		target.takeDamage(attackDamage)
 
 	state = State.IDLE
-	
 
 func _isTargetInFront() -> bool:
 	var spaceState = get_world_2d().direct_space_state
