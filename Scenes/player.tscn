@@ -804,6 +804,7 @@ animations = [{
 radius = 16.124516
 
 [node name="Player" type="CharacterBody2D" unique_id=708398039]
+z_index = 1
 script = ExtResource("1_vgqql")
 
 [node name="hitbox" type="CollisionShape2D" parent="." unique_id=578693703]
@@ -827,12 +828,19 @@ metadata/_edit_group_ = true
 shape = SubResource("CircleShape2D_xagnb")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1658385411]
+zoom = Vector2(1.5, 1.5)
 
 [node name="HUD" parent="Camera2D" unique_id=716140095 instance=ExtResource("5_fkybt")]
-offset_left = -239.0
-offset_top = -134.0
-offset_right = -239.0
-offset_bottom = -134.0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -159.0
+offset_top = -90.0
+offset_right = -159.0
+offset_bottom = -90.0
+grow_horizontal = 1
+grow_vertical = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="AttackRange" to="." method="_on_attack_range_body_entered"]
 [connection signal="body_exited" from="AttackRange" to="." method="_on_attack_range_body_exited"]
