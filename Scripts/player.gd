@@ -65,7 +65,7 @@ func updateRangeOffset() -> void:
 	var y := rangeBase.y
 
 	if last_direction.x != 0:
-		attack_range.position = Vector2(-x * signf(last_direction.x), y)
+		attack_range.position = Vector2(-x * signf(last_direction.x), y) 
 	elif last_direction.y < 0:
 		attack_range.position = Vector2(y - 2.5, x)
 	else:
