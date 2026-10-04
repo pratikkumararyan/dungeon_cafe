@@ -31,6 +31,9 @@ func _attack() -> void:
 	await animated_sprite_2d.animation_finished
 	attacking = false
 
+func takeDamage(amount: int) -> void:
+	PlayerStats.health -= amount
+
 func _process_movement():
 	if attacking:
 		velocity = Vector2.ZERO

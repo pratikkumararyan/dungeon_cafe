@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://duegdrhhkgrbh"]
 
-[ext_resource type="Texture2D" uid="uid://bgp2c2y4mgsha" path="res://Assets/Bee/U_Death.png" id="1_2af24"]
-[ext_resource type="Texture2D" uid="uid://hi8b32tjwxml" path="res://Assets/Bee/S_Death.png" id="2_34vqf"]
-[ext_resource type="Texture2D" uid="uid://ciospvio5beuk" path="res://Assets/Bee/D_Walk.png" id="3_tcj77"]
-[ext_resource type="Texture2D" uid="uid://d072gwq7sfblp" path="res://Assets/Bee/U_Walk.png" id="4_yt8gv"]
-[ext_resource type="Texture2D" uid="uid://bs1h511nod4o2" path="res://Assets/Bee/S_Walk.png" id="5_vhu46"]
+[ext_resource type="Texture2D" uid="uid://bgp2c2y4mgsha" path="res://Assets/Entities/Bee/U_Death.png" id="1_2af24"]
+[ext_resource type="Texture2D" uid="uid://hi8b32tjwxml" path="res://Assets/Entities/Bee/S_Death.png" id="2_34vqf"]
+[ext_resource type="Texture2D" uid="uid://ciospvio5beuk" path="res://Assets/Entities/Bee/D_Walk.png" id="3_tcj77"]
+[ext_resource type="Texture2D" uid="uid://d072gwq7sfblp" path="res://Assets/Entities/Bee/U_Walk.png" id="4_yt8gv"]
+[ext_resource type="Texture2D" uid="uid://bs1h511nod4o2" path="res://Assets/Entities/Bee/S_Walk.png" id="5_vhu46"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u3t42"]
 atlas = ExtResource("1_2af24")

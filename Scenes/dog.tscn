@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dst63gwe0qnqs"]
 
-[ext_resource type="Texture2D" uid="uid://bsde7m7mr65qi" path="res://Assets/Dog/D_Attack.png" id="1_2qe13"]
-[ext_resource type="Texture2D" uid="uid://cc3hxysogtxdu" path="res://Assets/Dog/D_Walk.png" id="1_y1yv2"]
-[ext_resource type="Texture2D" uid="uid://dbpdt68aixrwn" path="res://Assets/Dog/U_Walk.png" id="2_bno1h"]
-[ext_resource type="Texture2D" uid="uid://dmcdaynq1alyx" path="res://Assets/Dog/U_Attack.png" id="2_llnvy"]
-[ext_resource type="Texture2D" uid="uid://ddaxvm3a6kobl" path="res://Assets/Dog/S_Walk.png" id="3_6yb15"]
-[ext_resource type="Texture2D" uid="uid://db764aajpheo7" path="res://Assets/Dog/S_Attack.png" id="3_dam1u"]
-[ext_resource type="Texture2D" uid="uid://jpf1aaqn7jbu" path="res://Assets/Dog/D_Death.png" id="4_kcuxi"]
-[ext_resource type="Texture2D" uid="uid://dfpgnf3vmf8ve" path="res://Assets/Dog/U_Death.png" id="5_sy2b1"]
-[ext_resource type="Texture2D" uid="uid://dohsrhwyqswg" path="res://Assets/Dog/S_Death.png" id="6_k0nkm"]
+[ext_resource type="Texture2D" uid="uid://bsde7m7mr65qi" path="res://Assets/Entities/Dog/D_Attack.png" id="1_2qe13"]
+[ext_resource type="Texture2D" uid="uid://cc3hxysogtxdu" path="res://Assets/Entities/Dog/D_Walk.png" id="1_y1yv2"]
+[ext_resource type="Texture2D" uid="uid://dbpdt68aixrwn" path="res://Assets/Entities/Dog/U_Walk.png" id="2_bno1h"]
+[ext_resource type="Texture2D" uid="uid://dmcdaynq1alyx" path="res://Assets/Entities/Dog/U_Attack.png" id="2_llnvy"]
+[ext_resource type="Texture2D" uid="uid://ddaxvm3a6kobl" path="res://Assets/Entities/Dog/S_Walk.png" id="3_6yb15"]
+[ext_resource type="Texture2D" uid="uid://db764aajpheo7" path="res://Assets/Entities/Dog/S_Attack.png" id="3_dam1u"]
+[ext_resource type="Texture2D" uid="uid://jpf1aaqn7jbu" path="res://Assets/Entities/Dog/D_Death.png" id="4_kcuxi"]
+[ext_resource type="Texture2D" uid="uid://dfpgnf3vmf8ve" path="res://Assets/Entities/Dog/U_Death.png" id="5_sy2b1"]
+[ext_resource type="Texture2D" uid="uid://dohsrhwyqswg" path="res://Assets/Entities/Dog/S_Death.png" id="6_k0nkm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sndxk"]
 atlas = ExtResource("1_2qe13")

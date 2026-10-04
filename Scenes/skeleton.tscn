@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cjgfiew18rj8g"]
 
-[ext_resource type="Texture2D" uid="uid://cvopi3k01y5nu" path="res://Assets/Enemy_Animations_Set/enemies-skeleton1_attack.png" id="1_pegji"]
-[ext_resource type="Texture2D" uid="uid://bc3gd4u6foufc" path="res://Assets/Enemy_Animations_Set/enemies-skeleton1_death.png" id="2_5abox"]
-[ext_resource type="Texture2D" uid="uid://va2j2j3ahjor" path="res://Assets/Enemy_Animations_Set/enemies-skeleton1_take_damage.png" id="3_5abox"]
-[ext_resource type="Texture2D" uid="uid://ypw1vwi45b7a" path="res://Assets/Enemy_Animations_Set/enemies-skeleton1_idle.png" id="3_v8sxu"]
-[ext_resource type="Texture2D" uid="uid://ce1di7wuqgskq" path="res://Assets/Enemy_Animations_Set/enemies-skeleton1_movement.png" id="4_ks230"]
+[ext_resource type="Texture2D" uid="uid://cvopi3k01y5nu" path="res://Assets/Entities/Enemy_Animations_Set/enemies-skeleton1_attack.png" id="1_pegji"]
+[ext_resource type="Texture2D" uid="uid://bc3gd4u6foufc" path="res://Assets/Entities/Enemy_Animations_Set/enemies-skeleton1_death.png" id="2_5abox"]
+[ext_resource type="Texture2D" uid="uid://va2j2j3ahjor" path="res://Assets/Entities/Enemy_Animations_Set/enemies-skeleton1_take_damage.png" id="3_5abox"]
+[ext_resource type="Texture2D" uid="uid://ypw1vwi45b7a" path="res://Assets/Entities/Enemy_Animations_Set/enemies-skeleton1_idle.png" id="3_v8sxu"]
+[ext_resource type="Texture2D" uid="uid://ce1di7wuqgskq" path="res://Assets/Entities/Enemy_Animations_Set/enemies-skeleton1_movement.png" id="4_ks230"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sfdtf"]
 size = Vector2(10, 10)

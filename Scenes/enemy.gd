@@ -63,8 +63,9 @@ func _attack() -> void:
 		return
 
 	if target and global_position.distance_to(target.global_position) <= attackRange * 1.5 and target.has_method("takeDamage"):
-		target.takeDamage(attackDamage, global_position)
-	state = State.IDLE
+		#target.takeDamage(attackDamage, global_position)
+		target.takeDamage(attackDamage)
+		state = State.IDLE
 
 func takeDamage(amount: int, attacker_position: Vector2) -> void:
 	if state == State.DEAD:

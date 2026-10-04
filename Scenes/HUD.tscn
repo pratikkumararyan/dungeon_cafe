@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bdoc0ps1qexkn"]
+
+[ext_resource type="Script" uid="uid://cpffkfwef8sst" path="res://Scripts/HUD/progress_bar.gd" id="1_sd512"]
+
+[node name="HUD" type="Control" unique_id=716140095]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1390148753]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 27.0
+scale = Vector2(0.4, 0.4)
+value = 100.0
+script = ExtResource("1_sd512")
