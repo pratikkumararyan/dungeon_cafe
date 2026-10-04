@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://d2vlxmqt04h0a"]
+
+[ext_resource type="Texture2D" uid="uid://b8vqm7qqp4yim" path="res://Assets/Miscellaneous/items and trap_animation/chest/chest_1.png" id="1_uovm1"]
+[ext_resource type="Texture2D" uid="uid://02uj575sdos7" path="res://Assets/Miscellaneous/items and trap_animation/chest/chest_2.png" id="2_mrmno"]
+[ext_resource type="Texture2D" uid="uid://bve7i1myg6rel" path="res://Assets/Miscellaneous/items and trap_animation/chest/chest_3.png" id="3_k15qg"]
+[ext_resource type="Texture2D" uid="uid://hdpkv0qu1ypt" path="res://Assets/Miscellaneous/items and trap_animation/chest/chest_4.png" id="4_1puaa"]
+[ext_resource type="Texture2D" uid="uid://d31qu7vk01w2x" path="res://Assets/Miscellaneous/items and trap_animation/chest/chest_open_1.png" id="5_ed36l"]
+[ext_resource type="Texture2D" uid="uid://enaprwkwyht7" path="res://Assets/Miscellaneous/items and trap_animation/chest/chest_open_2.png" id="6_un233"]
+[ext_resource type="Texture2D" uid="uid://bpli374n6xk7h" path="res://Assets/Miscellaneous/items and trap_animation/chest/chest_open_3.png" id="7_a0i6c"]
+[ext_resource type="Texture2D" uid="uid://dny1t4iv8ij6o" path="res://Assets/Miscellaneous/items and trap_animation/chest/chest_open_4.png" id="8_isy45"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7wsd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uovm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mrmno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k15qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1puaa")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ed36l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_un233")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a0i6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_isy45")
+}],
+"loop": 1,
+"name": &"open",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jrwr"]
+size = Vector2(14, 12)
+
+[node name="Area2D" type="Area2D" unique_id=412464694]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1367864996]
+sprite_frames = SubResource("SpriteFrames_s7wsd")
+animation = &"idle"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.92891103
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1637759185]
+shape = SubResource("RectangleShape2D_2jrwr")

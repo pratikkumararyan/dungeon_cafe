@@ -10,7 +10,30 @@
 [ext_resource type="Texture2D" uid="uid://c5rgprj5fvdqj" path="res://Assets/Miscellaneous/Character_animation/priests_idle/priest1/v1/priest1_v1_2.png" id="7_qyfso"]
 [ext_resource type="Texture2D" uid="uid://dbwlbwuxbx5d1" path="res://Assets/Miscellaneous/Character_animation/priests_idle/priest1/v1/priest1_v1_3.png" id="8_a6njs"]
 [ext_resource type="Texture2D" uid="uid://cnrw3rrd0ogl2" path="res://Assets/Miscellaneous/Character_animation/priests_idle/priest1/v1/priest1_v1_4.png" id="9_4p6ii"]
-[ext_resource type="PackedScene" uid="uid://cj8nma4ww2326" path="res://Scenes/arrowUI.tscn" id="11_qyfso"]
+[ext_resource type="Texture2D" uid="uid://l3rm2pxcllvt" path="res://Assets/Miscellaneous/interface/arrow_1.png" id="11_8tmi8"]
+[ext_resource type="Texture2D" uid="uid://bc0iyk853k4u5" path="res://Assets/Miscellaneous/interface/arrow_2.png" id="12_5rg3c"]
+[ext_resource type="Texture2D" uid="uid://cvb6a4qnghaes" path="res://Assets/Miscellaneous/interface/arrow_3.png" id="13_ekmmh"]
+[ext_resource type="Texture2D" uid="uid://ds6p13ef22ick" path="res://Assets/Miscellaneous/interface/arrow_4.png" id="14_3grcr"]
+[ext_resource type="Texture2D" uid="uid://iwro0sffl7sr" path="res://Assets/Miscellaneous/items and trap_animation/flag/flag_1.png" id="15_lcf3o"]
+[ext_resource type="Texture2D" uid="uid://dol5hu1et4yhb" path="res://Assets/Miscellaneous/items and trap_animation/flag/flag_2.png" id="16_kykde"]
+[ext_resource type="Texture2D" uid="uid://cj22r5patpyrp" path="res://Assets/Miscellaneous/items and trap_animation/flag/flag_3.png" id="17_0d1km"]
+[ext_resource type="Texture2D" uid="uid://d1epe5o38xig0" path="res://Assets/Miscellaneous/items and trap_animation/flag/flag_4.png" id="18_kddb2"]
+[ext_resource type="Texture2D" uid="uid://n7a1aahicow5" path="res://Assets/Miscellaneous/items and trap_animation/torch/torch_1.png" id="19_lj2au"]
+[ext_resource type="Texture2D" uid="uid://vgql7hqbl71j" path="res://Assets/Miscellaneous/items and trap_animation/torch/torch_2.png" id="20_xembr"]
+[ext_resource type="Texture2D" uid="uid://cpifnxhxp2nxt" path="res://Assets/Miscellaneous/items and trap_animation/torch/torch_3.png" id="21_g17ak"]
+[ext_resource type="Texture2D" uid="uid://s8r25psnr02p" path="res://Assets/Miscellaneous/items and trap_animation/torch/torch_4.png" id="22_0n76g"]
+[ext_resource type="Texture2D" uid="uid://bqhcbdq0pgcs" path="res://Assets/Miscellaneous/items and trap_animation/torch/side_torch_1.png" id="23_muis0"]
+[ext_resource type="Texture2D" uid="uid://b6l7oe6dnbjqb" path="res://Assets/Miscellaneous/items and trap_animation/torch/side_torch_2.png" id="24_mpbx5"]
+[ext_resource type="Texture2D" uid="uid://dp0dgkvl2m63k" path="res://Assets/Miscellaneous/items and trap_animation/torch/side_torch_3.png" id="25_l043d"]
+[ext_resource type="Texture2D" uid="uid://cbrc6l5tyv4ij" path="res://Assets/Miscellaneous/items and trap_animation/torch/side_torch_4.png" id="26_todqu"]
+[ext_resource type="Texture2D" uid="uid://sq3hqgdim712" path="res://Assets/Miscellaneous/items and trap_animation/torch/candlestick_1_1.png" id="27_hyv18"]
+[ext_resource type="Texture2D" uid="uid://digg7o1adguxw" path="res://Assets/Miscellaneous/items and trap_animation/torch/candlestick_1_2.png" id="28_vgwln"]
+[ext_resource type="Texture2D" uid="uid://ra6u8ey27e22" path="res://Assets/Miscellaneous/items and trap_animation/torch/candlestick_1_3.png" id="29_tplab"]
+[ext_resource type="Texture2D" uid="uid://bk3xp56h1mbcj" path="res://Assets/Miscellaneous/items and trap_animation/torch/candlestick_1_4.png" id="30_pftuu"]
+[ext_resource type="Texture2D" uid="uid://cijtllijsrcqr" path="res://Assets/Miscellaneous/items and trap_animation/torch/candlestick_2_1.png" id="31_kqgt0"]
+[ext_resource type="Texture2D" uid="uid://cttkd4s3hcegg" path="res://Assets/Miscellaneous/items and trap_animation/torch/candlestick_2_2.png" id="32_l0qwn"]
+[ext_resource type="Texture2D" uid="uid://c6whr0rav43wm" path="res://Assets/Miscellaneous/items and trap_animation/torch/candlestick_2_3.png" id="33_hsrgp"]
+[ext_resource type="Texture2D" uid="uid://doi6oushbgeyw" path="res://Assets/Miscellaneous/items and trap_animation/torch/candlestick_2_4.png" id="34_beq3h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mfu5p"]
 texture = ExtResource("1_km3fo")
@@ -170,6 +193,111 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7rlf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_8tmi8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5rg3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ekmmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3grcr")
+}],
+"loop": 1,
+"name": &"arrows",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_lcf3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_kykde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_0d1km")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_kddb2")
+}],
+"loop": 1,
+"name": &"flag",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_lj2au")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xembr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_g17ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0n76g")
+}],
+"loop": 1,
+"name": &"flame",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_muis0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_mpbx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_l043d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_todqu")
+}],
+"loop": 1,
+"name": &"sideTorch",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_hyv18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_vgwln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_tplab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_pftuu")
+}],
+"loop": 1,
+"name": &"torch",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_kqgt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_l0qwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_hsrgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_beq3h")
+}],
+"loop": 1,
+"name": &"torch2",
+"speed": 10.0
+}]
+
 [node name="Node2D" type="Node2D" unique_id=541352945]
 
 [node name="masterMap" type="TileMapLayer" parent="." unique_id=2031170306]
@@ -177,7 +305,7 @@ tile_map_data = PackedByteArray("AAD8//r/AAADAAAAAAD9//r/AAACAAAAAAD+//r/AAABAAA
 tile_set = SubResource("TileSet_6b2n3")
 
 [node name="props" type="TileMapLayer" parent="." unique_id=624882147]
-tile_map_data = PackedByteArray("AAD//wcAAAAGAAMAAAD//wQAAAAIAAYAAAAAAAUAAAAEAAYAADAEAP//AAAJAAUAAAAKAP7/AAAIAAYAAAACAPv/AAAFAAYAAAD+////AAAHAAcAAAAAAPz/AAAJAAQAAAAAAAcAAAAHAAMAAAASAAMAAAAGAAMAAAATAAMAAAAHAAMAAAA=")
+tile_map_data = PackedByteArray("AAD//wcAAAAGAAMAAAD//wQAAAAIAAYAAAAAAAUAAAAEAAYAADAEAP//AAAJAAUAAAAKAP7/AAAIAAYAAAD+////AAAHAAcAAAAAAPz/AAAJAAQAAAAAAAcAAAAHAAMAAAASAAMAAAAGAAMAAAATAAMAAAAHAAMAAAA=")
 tile_set = SubResource("TileSet_6b2n3")
 
 [node name="Skeleton" parent="." unique_id=1499633693 instance=ExtResource("2_mfu5p")]
@@ -216,8 +344,46 @@ frame_progress = 0.052538905
 [node name="key" parent="." unique_id=2120676148 instance=ExtResource("6_osnen")]
 position = Vector2(215, 79)
 
-[node name="prop1" parent="." unique_id=979517052 instance=ExtResource("11_qyfso")]
-position = Vector2(31, 44)
+[node name="prop1" type="AnimatedSprite2D" parent="." unique_id=831837325]
+position = Vector2(31, 24)
 rotation = 3.1415927
+sprite_frames = SubResource("SpriteFrames_s7rlf")
 animation = &"arrows"
-frame_progress = 0.0
+autoplay = "arrows"
+
+[node name="prop2" type="AnimatedSprite2D" parent="." unique_id=91559689]
+position = Vector2(-31, 24)
+rotation = 3.1415927
+sprite_frames = SubResource("SpriteFrames_s7rlf")
+animation = &"arrows"
+autoplay = "arrows"
+
+[node name="prop3" type="AnimatedSprite2D" parent="." unique_id=887442597]
+position = Vector2(-56, -35)
+sprite_frames = SubResource("SpriteFrames_s7rlf")
+animation = &"sideTorch"
+autoplay = "sideTorch"
+
+[node name="prop4" type="AnimatedSprite2D" parent="." unique_id=331361105]
+position = Vector2(-56, -74)
+sprite_frames = SubResource("SpriteFrames_s7rlf")
+animation = &"sideTorch"
+autoplay = "sideTorch"
+
+[node name="prop5" type="AnimatedSprite2D" parent="." unique_id=962982722]
+position = Vector2(104, -24)
+sprite_frames = SubResource("SpriteFrames_s7rlf")
+animation = &"flag"
+autoplay = "flag"
+
+[node name="prop6" type="AnimatedSprite2D" parent="." unique_id=873919880]
+position = Vector2(40, -35)
+sprite_frames = SubResource("SpriteFrames_s7rlf")
+animation = &"flame"
+autoplay = "flame"
+
+[node name="prop7" type="AnimatedSprite2D" parent="." unique_id=876180073]
+position = Vector2(40, -79)
+sprite_frames = SubResource("SpriteFrames_s7rlf")
+animation = &"torch"
+autoplay = "torch"
