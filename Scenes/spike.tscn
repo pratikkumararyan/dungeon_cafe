@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://jxtmy84ucri8"]
+
+[ext_resource type="Texture2D" uid="uid://cnxkgy20nwox7" path="res://Assets/Miscellaneous/items and trap_animation/peaks/peaks_1.png" id="1_fhxds"]
+[ext_resource type="Texture2D" uid="uid://chbsu8wq2yugw" path="res://Assets/Miscellaneous/items and trap_animation/peaks/peaks_2.png" id="2_khj5f"]
+[ext_resource type="Texture2D" uid="uid://kh4bghneeo4w" path="res://Assets/Miscellaneous/items and trap_animation/peaks/peaks_3.png" id="3_pkk5q"]
+[ext_resource type="Texture2D" uid="uid://uti0m8caww" path="res://Assets/Miscellaneous/items and trap_animation/peaks/peaks_4.png" id="4_7ns7h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7wsd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fhxds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_khj5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pkk5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7ns7h")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iiq8e"]
+size = Vector2(11, 14)
+
+[node name="Area2D" type="Area2D" unique_id=772351167]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1504574128]
+sprite_frames = SubResource("SpriteFrames_s7wsd")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.36656183
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1324476279]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_iiq8e")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1925785143]
+visible = false
+amount = 5
+emission_shape = 3
+emission_rect_extents = Vector2(1, 1)
+spread = 180.0
+color = Color(0.96639705, 0.91654986, 0.46109095, 0.93333334)

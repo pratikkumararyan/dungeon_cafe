@@ -54,6 +54,7 @@ size = Vector2(11, 5)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1504574128]
 sprite_frames = SubResource("SpriteFrames_s7wsd")
 animation = &"silverKey"
+autoplay = "silverKey"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1324476279]
 position = Vector2(0.5, 0.5)

@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://c7gag3y23qv4r" path="res://Assets/Miscellaneous/character and tileset/Dungeon_Tileset.png" id="1_km3fo"]
 [ext_resource type="PackedScene" uid="uid://cjgfiew18rj8g" path="res://Scenes/skeleton.tscn" id="2_mfu5p"]
 [ext_resource type="PackedScene" uid="uid://0y8k3em2aa32" path="res://Scenes/vampire.tscn" id="3_a65fu"]
-[ext_resource type="PackedScene" uid="uid://dh7daeectm75c" path="res://Scenes/coin.tscn" id="4_ukl56"]
+[ext_resource type="PackedScene" uid="uid://jxtmy84ucri8" path="res://Scenes/spike.tscn" id="4_ukl56"]
+[ext_resource type="PackedScene" uid="uid://cfg2sshu04wqb" path="res://Scenes/goblin.tscn" id="5_vpl2n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mfu5p"]
 texture = ExtResource("1_km3fo")
@@ -157,23 +158,14 @@ position = Vector2(-54, -14)
 position = Vector2(178, 18)
 scale = Vector2(0.75, 0.75)
 
-[node name="coin" parent="." unique_id=772351167 instance=ExtResource("4_ukl56")]
-position = Vector2(5, -71)
+[node name="spike" parent="." unique_id=772351167 instance=ExtResource("4_ukl56")]
+position = Vector2(154, 51)
 
-[node name="coin2" parent="." unique_id=748354698 instance=ExtResource("4_ukl56")]
-position = Vector2(24, -71)
+[node name="spike2" parent="." unique_id=1892549357 instance=ExtResource("4_ukl56")]
+position = Vector2(197, 51)
 
-[node name="coin3" parent="." unique_id=1486145082 instance=ExtResource("4_ukl56")]
-position = Vector2(-14, -71)
+[node name="spike3" parent="." unique_id=670309585 instance=ExtResource("4_ukl56")]
+position = Vector2(175, 51)
 
-[node name="coin4" parent="." unique_id=1826343605 instance=ExtResource("4_ukl56")]
-position = Vector2(-35, -71)
-
-[node name="coin5" parent="." unique_id=1963409748 instance=ExtResource("4_ukl56")]
-position = Vector2(-47, -46)
-
-[node name="coin6" parent="." unique_id=1053358129 instance=ExtResource("4_ukl56")]
-position = Vector2(-56, -36)
-
-[node name="coin7" parent="." unique_id=1025606869 instance=ExtResource("4_ukl56")]
-position = Vector2(-37, -36)
+[node name="Node2D" parent="." unique_id=316175556 instance=ExtResource("5_vpl2n")]
+position = Vector2(304, 0)
