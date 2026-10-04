@@ -13,7 +13,7 @@ position = Vector2(73.66666, 68.333336)
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=708398039 instance=ExtResource("2_unpil")]
-position = Vector2(182.66667, 53.33333)
+position = Vector2(402.33334, 569)
 scale = Vector2(0.8, 0.8)
 
 [node name="Vampire" parent="." unique_id=2078070 instance=ExtResource("3_uuxpa")]

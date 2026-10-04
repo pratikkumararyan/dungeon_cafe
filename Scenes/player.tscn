@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://bdoc0ps1qexkn" path="res://Scenes/HUD.tscn" id="5_fkybt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0iea"]
+size = Vector2(9, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkybt"]
 size = Vector2(9, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
@@ -808,20 +811,21 @@ z_index = 1
 script = ExtResource("1_vgqql")
 
 [node name="hitbox" type="CollisionShape2D" parent="." unique_id=578693703]
-position = Vector2(-0.5, 3.5)
+position = Vector2(-1, 2)
 shape = SubResource("RectangleShape2D_v0iea")
 
 [node name="Feet" type="Area2D" parent="." unique_id=1342977517]
 collision_layer = 2
 
 [node name="hitbox2" type="CollisionShape2D" parent="Feet" unique_id=1165397035]
-position = Vector2(-0.5, 10.5)
-shape = SubResource("RectangleShape2D_v0iea")
+position = Vector2(-1, 10.5)
+shape = SubResource("RectangleShape2D_fkybt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=239077366]
 sprite_frames = SubResource("SpriteFrames_s7wsd")
 animation = &"attackBackward"
 autoplay = "idleForward"
+metadata/_edit_lock_ = true
 
 [node name="Cooldown" type="Timer" parent="." unique_id=776738162]
 wait_time = 1.7999999999999998
@@ -830,12 +834,14 @@ one_shot = true
 [node name="AttackRange" type="Area2D" parent="." unique_id=677873926]
 position = Vector2(-7, 0)
 metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Radi" type="CollisionShape2D" parent="AttackRange" unique_id=436254667]
 shape = SubResource("CircleShape2D_xagnb")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1658385411]
 zoom = Vector2(1.5, 1.5)
+metadata/_edit_lock_ = true
 
 [node name="HUD" parent="Camera2D" unique_id=716140095 instance=ExtResource("5_fkybt")]
 anchors_preset = 0
