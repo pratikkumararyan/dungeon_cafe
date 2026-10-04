@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c2wcbst2qam1u"]
 
 [ext_resource type="Texture2D" uid="uid://brexmhb0f5mt6" path="res://Assets/mm.png" id="1_28flt"]
+[ext_resource type="Script" uid="uid://bahufyn6cvs1" path="res://Scripts/main_menu.gd" id="1_48xlc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xagnb"]
 texture = ExtResource("1_28flt")
@@ -30,6 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_48xlc")
 
 [node name="Panel" type="Panel" parent="." unique_id=1673278600]
 layout_mode = 1
@@ -87,3 +89,6 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Dungeon Cafe"
 label_settings = SubResource("LabelSettings_xagnb")
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
