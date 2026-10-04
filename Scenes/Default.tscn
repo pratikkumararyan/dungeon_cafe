@@ -13,7 +13,7 @@ position = Vector2(73.66666, 68.333336)
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=708398039 instance=ExtResource("2_unpil")]
-position = Vector2(402.33334, 569)
+position = Vector2(405.66675, 587.3334)
 scale = Vector2(0.8, 0.8)
 
 [node name="Vampire" parent="." unique_id=2078070 instance=ExtResource("3_uuxpa")]
@@ -23,6 +23,17 @@ speed = 45.0
 attackCooldown = 1.5
 attackDamage = 7
 KNOCKBACK_DISTANCE = 10.0
+ATTACK_RAY_COUNT = 280
+ATTACK_SPREAD_DEGREES = 140.0
+innerRangeRadius = 45.0
+outerRangeRadius = 80.0
+
+[node name="Vampire2" parent="." unique_id=1379061439 instance=ExtResource("3_uuxpa")]
+position = Vector2(810.6667, 193)
+speed = 45.0
+attackCooldown = 1.2
+attackDamage = 25
+KNOCKBACK_DISTANCE = 25.0
 ATTACK_RAY_COUNT = 280
 ATTACK_SPREAD_DEGREES = 140.0
 innerRangeRadius = 45.0

@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Dungeon Cafe"
-run/main_scene="uid://dvhs5ygscknd"
+run/main_scene="uid://c2wcbst2qam1u"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+run/stretch/scale_mode="fractional"
 
 [autoload]
 

@@ -15,6 +15,12 @@ func _ready() -> void:
 	rangeBase = attack_range.position
 
 func _physics_process(delta: float) -> void:
+	if PlayerStats.health <= 0:
+		get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
+		PlayerStats.health = 100
+		PlayerStats.gold_keys = 0
+		PlayerStats.silver_keys = 0
+	
 	if Input.is_action_just_pressed("pAttack1") and $Cooldown.is_stopped() and not attacking:
 		_attack()
 	_process_movement()

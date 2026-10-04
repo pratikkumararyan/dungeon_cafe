@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://c2wcbst2qam1u"]
+[gd_scene format=3 uid="uid://bmy7uh4mkpr1o"]
 
-[ext_resource type="Texture2D" uid="uid://brexmhb0f5mt6" path="res://Assets/mm.png" id="1_28flt"]
-[ext_resource type="Script" uid="uid://bahufyn6cvs1" path="res://Scripts/main_menu.gd" id="1_48xlc"]
+[ext_resource type="Script" uid="uid://bahufyn6cvs1" path="res://Scripts/main_menu.gd" id="1_rwas2"]
+[ext_resource type="Texture2D" uid="uid://brexmhb0f5mt6" path="res://Assets/mm.png" id="2_tseak"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xagnb"]
-texture = ExtResource("1_28flt")
+texture = ExtResource("2_tseak")
 modulate_color = Color(0.50928617, 0.50928617, 0.50928617, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xagnb"]
@@ -31,7 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_48xlc")
+script = ExtResource("1_rwas2")
 
 [node name="Panel" type="Panel" parent="." unique_id=1673278600]
 layout_mode = 1
@@ -64,7 +64,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_xagnb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
-text = "burn my eyes"
+text = "Pley agen"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=657137549]
 layout_mode = 2
@@ -72,7 +72,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_xagnb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
-text = "save my eyes"
+text = "i suck"
 
 [node name="Label" type="Label" parent="." unique_id=465456543]
 layout_mode = 1
@@ -81,13 +81,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 98.0
-offset_top = -166.0
-offset_right = 560.0
-offset_bottom = -60.0
+offset_left = -428.0
+offset_top = -211.0
+offset_right = 34.0
+offset_bottom = -105.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Dungeon Cafe"
+text = "You died lmao"
 label_settings = SubResource("LabelSettings_xagnb")
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
