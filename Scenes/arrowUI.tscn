@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cj8nma4ww2326"]
+
+[ext_resource type="Texture2D" uid="uid://l3rm2pxcllvt" path="res://Assets/Miscellaneous/interface/arrow_1.png" id="1_ft7hh"]
+[ext_resource type="Texture2D" uid="uid://bc0iyk853k4u5" path="res://Assets/Miscellaneous/interface/arrow_2.png" id="2_ehcag"]
+[ext_resource type="Texture2D" uid="uid://cvb6a4qnghaes" path="res://Assets/Miscellaneous/interface/arrow_3.png" id="3_wr8xk"]
+[ext_resource type="Texture2D" uid="uid://ds6p13ef22ick" path="res://Assets/Miscellaneous/interface/arrow_4.png" id="4_y8h8h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7wsd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ft7hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ehcag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wr8xk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y8h8h")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=979517052]
+sprite_frames = SubResource("SpriteFrames_s7wsd")
+frame_progress = 0.024611222
