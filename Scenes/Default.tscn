@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://r2jmbdn0pt1" path="res://Scenes/environment.tscn" id="1_c6y6c"]
 [ext_resource type="PackedScene" uid="uid://bwumulnf2mbw4" path="res://Scenes/player.tscn" id="2_unpil"]
+[ext_resource type="PackedScene" uid="uid://0y8k3em2aa32" path="res://Scenes/vampire.tscn" id="3_uuxpa"]
 
 [node name="Scene" type="Node2D" unique_id=1060321192]
 scale = Vector2(3, 3)
@@ -9,7 +10,20 @@ scale = Vector2(3, 3)
 [node name="Environment" parent="." unique_id=541352945 instance=ExtResource("1_c6y6c")]
 z_index = -2
 position = Vector2(73.66666, 68.333336)
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=708398039 instance=ExtResource("2_unpil")]
 position = Vector2(73.66667, 170)
 scale = Vector2(0.8, 0.8)
+
+[node name="Vampire" parent="." unique_id=2078070 instance=ExtResource("3_uuxpa")]
+position = Vector2(249, 129.33334)
+health = 40
+speed = 45.0
+attackCooldown = 1.5
+attackDamage = 5
+KNOCKBACK_DISTANCE = 10.0
+ATTACK_RAY_COUNT = 280
+ATTACK_SPREAD_DEGREES = 140.0
+innerRangeRadius = 45.0
+outerRangeRadius = 80.0

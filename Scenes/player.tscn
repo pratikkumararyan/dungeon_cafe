@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bdoc0ps1qexkn" path="res://Scenes/HUD.tscn" id="5_fkybt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0iea"]
-size = Vector2(9, 14)
+size = Vector2(9, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
 atlas = ExtResource("1_6t5aa")
@@ -807,7 +807,7 @@ radius = 16.124516
 script = ExtResource("1_vgqql")
 
 [node name="hitbox" type="CollisionShape2D" parent="." unique_id=578693703]
-position = Vector2(0.5, 2)
+position = Vector2(-0.5, 3.5)
 shape = SubResource("RectangleShape2D_v0iea")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=239077366]

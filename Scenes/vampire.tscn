@@ -1237,18 +1237,22 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_djr8b"]
-size = Vector2(10, 18)
+size = Vector2(11, 26)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xagnb"]
-radius = 40.012497
+[sub_resource type="CircleShape2D" id="CircleShape2D_2tffl"]
+radius = 150.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_o01uv"]
-radius = 66.37017
+[sub_resource type="CircleShape2D" id="CircleShape2D_fdgvd"]
+radius = 250.0
 
 [node name="Vampire" type="CharacterBody2D" unique_id=2078070 groups=["enemy"]]
 z_index = -1
 collision_mask = 3
+motion_mode = 1
 script = ExtResource("1_te72b")
+KNOCKBACK_DISTANCE = null
+ATTACK_RAY_COUNT = null
+ATTACK_SPREAD_DEGREES = null
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=325074342 groups=["enemy"]]
@@ -1259,7 +1263,7 @@ frame = 11
 frame_progress = 1.0
 
 [node name="hitbox" type="CollisionShape2D" parent="." unique_id=1491612501 groups=["enemy"]]
-position = Vector2(0, -1)
+position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_djr8b")
 
 [node name="Blood Particle Effect" parent="." unique_id=596861889 instance=ExtResource("7_2tffl")]
@@ -1267,12 +1271,12 @@ shape = SubResource("RectangleShape2D_djr8b")
 [node name="innerRange" type="Area2D" parent="." unique_id=1846576859]
 
 [node name="radi" type="CollisionShape2D" parent="innerRange" unique_id=714120040]
-shape = SubResource("CircleShape2D_xagnb")
+shape = SubResource("CircleShape2D_2tffl")
 
 [node name="outerRange" type="Area2D" parent="." unique_id=1035212298]
 
 [node name="radi" type="CollisionShape2D" parent="outerRange" unique_id=871932905]
-shape = SubResource("CircleShape2D_o01uv")
+shape = SubResource("CircleShape2D_fdgvd")
 
 [connection signal="body_entered" from="innerRange" to="." method="_on_inner_range_body_entered"]
 [connection signal="body_exited" from="outerRange" to="." method="_on_outer_range_body_exited"]

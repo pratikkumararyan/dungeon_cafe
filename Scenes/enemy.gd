@@ -3,6 +3,9 @@ extends CharacterBody2D
 
 enum State { IDLE, CHASE, ATTACK, HIT, DEAD }
 
+# Consts
+const KNOCKBACK_TIME := 0.5
+
 # Exported stats
 @export var health := 100
 @export var speed := 30.0
@@ -33,6 +36,7 @@ var target: Node2D = null
 var canAttack := true
 var attackId := 0
 var knockbackTween: Tween
+var knockbackVelocity := Vector2.ZERO
 
 # Nodes
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -54,9 +58,12 @@ func _physics_process(delta: float) -> void:
 		return
 	queue_redraw()
 	
+	if state == State.HIT or state == State.DEAD:
+		move_and_collide(knockbackVelocity * delta)
+
 	if state == State.DEAD or state == State.HIT or state == State.ATTACK:
 		return
-
+		
 	if target:
 		var direction = global_position.direction_to(target.global_position)
 
@@ -141,10 +148,11 @@ func takeDamage(amount: int, attacker_position: Vector2) -> void:
 
 	if knockbackTween:
 		knockbackTween.kill()
+	knockbackVelocity = knockback_direction * KNOCKBACK_DISTANCE * 4.0 / KNOCKBACK_TIME
 	knockbackTween = create_tween()
 	knockbackTween.set_ease(Tween.EASE_OUT)
 	knockbackTween.set_trans(Tween.TRANS_CUBIC)
-	knockbackTween.tween_property(self, "global_position", target_position, 0.5)
+	knockbackTween.tween_property(self, "knockbackVelocity", Vector2.ZERO, KNOCKBACK_TIME)
 
 	$"Blood Particle Effect/CPUParticles2D".emitting = true
 
