@@ -5,7 +5,7 @@ enum State { IDLE, CHASE, ATTACK, HIT, DEAD }
 @export var health := 100
 @export var speed := 30.0
 @export var attackRange := 40.0
-@export var attackCooldown := 1.0
+@export var attackCooldown := 2.0
 @export var attackDamage := 10
 const KNOCKBACK_DISTANCE := 50.0
 
