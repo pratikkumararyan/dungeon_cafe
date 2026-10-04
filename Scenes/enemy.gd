@@ -1,36 +1,70 @@
 extends CharacterBody2D
 
-enum State { IDLE, CHASE, HIT, DEAD }
+enum State { IDLE, CHASE, ATTACK, HIT, DEAD }
 
 @export var health := 100
-@export var speed := 40.0
-const KNOCKBACK_DISTANCE := 40.0
+@export var speed := 30.0
+@export var attackRange := 40.0
+@export var attackCooldown := 1.0
+@export var attackDamage := 10
+const KNOCKBACK_DISTANCE := 50.0
 
 var state := State.IDLE
 var last_direction: Vector2 = Vector2.DOWN
 var target: Node2D = null
+var canAttack := true
 var knockbackTween: Tween
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-func _process(delta: float) -> void:
-	if state == State.DEAD or state == State.HIT:
+func _ready() -> void:
+	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
+
+func _physics_process(delta: float) -> void:
+	if state == State.DEAD or state == State.HIT or state == State.ATTACK:
 		return
 
 	if target:
 		var direction = global_position.direction_to(target.global_position)
-		velocity = direction * speed
-		move_and_slide()
-		state = State.CHASE
 
 		if abs(direction.x) > abs(direction.y):
 			last_direction = Vector2(sign(direction.x), 0)
 		else:
 			last_direction = Vector2(0, sign(direction.y))
 
+		if global_position.distance_to(target.global_position) <= attackRange:
+			velocity = Vector2.ZERO
+			if canAttack:
+				_attack()
+			else:
+				state = State.IDLE
+				_playAnimation("idle")
+			return
+
+		velocity = direction * speed
+		move_and_slide()
+		state = State.CHASE
 		_playAnimation("walk")
 	else:
 		velocity = Vector2.ZERO
 		state = State.IDLE
+		_playAnimation("idle")
+
+var attackId := 0
+func _attack() -> void:
+	state = State.ATTACK
+	canAttack = false
+	attackId += 1
+	var myId = attackId
+	_playAnimation("attack")
+	get_tree().create_timer(attackCooldown).timeout.connect(func(): canAttack = true)
+
+	await animated_sprite_2d.animation_finished
+	if myId != attackId or state != State.ATTACK:
+		return
+
+	if target and global_position.distance_to(target.global_position) <= attackRange * 1.5 and target.has_method("takeDamage"):
+		target.takeDamage(attackDamage, global_position)
+	state = State.IDLE
 
 func takeDamage(amount: int, attacker_position: Vector2) -> void:
 	if state == State.DEAD:

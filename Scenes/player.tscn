@@ -815,7 +815,7 @@ animation = &"attackBackward"
 autoplay = "idleForward"
 
 [node name="Cooldown" type="Timer" parent="." unique_id=776738162]
-wait_time = 0.1
+wait_time = 1.7999999999999998
 one_shot = true
 
 [node name="AttackRange" type="Area2D" parent="." unique_id=677873926]

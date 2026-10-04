@@ -16,3 +16,4 @@ scale = Vector2(0.8, 0.8)
 
 [node name="CharacterBody2D" parent="." unique_id=2078070 instance=ExtResource("3_uuxpa")]
 position = Vector2(66.333336, 26)
+attackRange = 70.0
