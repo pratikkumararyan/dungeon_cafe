@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://0y8k3em2aa32" path="res://Scenes/vampire.tscn" id="3_a65fu"]
 [ext_resource type="PackedScene" uid="uid://jxtmy84ucri8" path="res://Scenes/spike.tscn" id="4_ukl56"]
 [ext_resource type="PackedScene" uid="uid://cfg2sshu04wqb" path="res://Scenes/goblin.tscn" id="5_vpl2n"]
+[ext_resource type="PackedScene" uid="uid://yv25ovdnsii2" path="res://Scenes/key.tscn" id="6_osnen"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mfu5p"]
 texture = ExtResource("1_km3fo")
@@ -169,3 +170,6 @@ position = Vector2(176, 71)
 
 [node name="goblin" parent="." unique_id=316175556 instance=ExtResource("5_vpl2n")]
 position = Vector2(304, 0)
+
+[node name="key" parent="." unique_id=2120676148 instance=ExtResource("6_osnen")]
+position = Vector2(214, 87)

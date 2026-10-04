@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbpdt68aixrwn"
-path="res://.godot/imported/U_Walk.png-d45d4a2715efd732df2e11f121e51016.ctex"
+uid="uid://dohsrhwyqswg"
+path="res://.godot/imported/S_Death.png-cadf576a3058ac1ef8ae47de2d8cc49d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Moose/U_Walk.png"
-dest_files=["res://.godot/imported/U_Walk.png-d45d4a2715efd732df2e11f121e51016.ctex"]
+source_file="res://Assets/Dog/S_Death.png"
+dest_files=["res://.godot/imported/S_Death.png-cadf576a3058ac1ef8ae47de2d8cc49d.ctex"]
 
 [params]
 
