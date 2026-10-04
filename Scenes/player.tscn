@@ -453,7 +453,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"attackBackward",
-"speed": 10.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -482,7 +482,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"attackForward",
-"speed": 10.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -511,7 +511,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"attackLeft",
-"speed": 10.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -540,7 +540,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"attackRight",
-"speed": 10.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -811,13 +811,11 @@ shape = SubResource("RectangleShape2D_v0iea")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=239077366]
 sprite_frames = SubResource("SpriteFrames_s7wsd")
-animation = &"attackLeft"
+animation = &"attackBackward"
 autoplay = "idleForward"
-frame = 5
-frame_progress = 0.15908873
 
 [node name="Cooldown" type="Timer" parent="." unique_id=776738162]
-wait_time = 0.2
+wait_time = 0.1
 one_shot = true
 
 [node name="AttackRange" type="Area2D" parent="." unique_id=677873926]

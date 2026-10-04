@@ -25,7 +25,7 @@ func _attack() -> void:
 	_play_animation("attack", last_direction)
 	
 	for h in inRange:
-		h.takeDamage(PlayerStats.attack_damage)
+		h.takeDamage(PlayerStats.attack_damage, global_position)
 	
 	$Cooldown.start()
 	await animated_sprite_2d.animation_finished
