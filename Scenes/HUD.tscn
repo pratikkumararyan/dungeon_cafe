@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bdoc0ps1qexkn"]
 
-[ext_resource type="Script" uid="uid://cpffkfwef8sst" path="res://Scripts/HUD/progress_bar.gd" id="1_sd512"]
+[ext_resource type="Texture2D" uid="uid://dan1j6wtde3sq" path="res://Assets/UI/Life Bars/Medium Bars/4.png" id="1_psnte"]
+[ext_resource type="Script" uid="uid://cpffkfwef8sst" path="res://Scripts/HUD/health_bar.gd" id="1_sd512"]
+[ext_resource type="Texture2D" uid="uid://ctvx5wp0eil1g" path="res://Assets/UI/Life Bars/Colors/1.png" id="2_s3jbq"]
 
 [node name="HUD" type="Control" unique_id=716140095]
 layout_mode = 3
@@ -10,10 +12,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1390148753]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=176399159]
+custom_maximum_size = Vector2(100, 5)
+clip_contents = true
 layout_mode = 0
-offset_right = 500.0
-offset_bottom = 27.0
-scale = Vector2(0.4, 0.4)
+offset_right = 200.0
+offset_bottom = 5.0
 value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_psnte")
+texture_progress = ExtResource("2_s3jbq")
 script = ExtResource("1_sd512")
