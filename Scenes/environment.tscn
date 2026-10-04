@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cbrc6l5tyv4ij" path="res://Assets/Miscellaneous/items and trap_animation/torch/side_torch_4.png" id="26_todqu"]
 [ext_resource type="Texture2D" uid="uid://sq3hqgdim712" path="res://Assets/Miscellaneous/items and trap_animation/torch/candlestick_1_1.png" id="27_hyv18"]
 [ext_resource type="Texture2D" uid="uid://digg7o1adguxw" path="res://Assets/Miscellaneous/items and trap_animation/torch/candlestick_1_2.png" id="28_vgwln"]
+[ext_resource type="Script" uid="uid://daijxyk82acw8" path="res://Scripts/door.gd" id="28_wt180"]
 [ext_resource type="Texture2D" uid="uid://ra6u8ey27e22" path="res://Assets/Miscellaneous/items and trap_animation/torch/candlestick_1_3.png" id="29_tplab"]
 [ext_resource type="Texture2D" uid="uid://bk3xp56h1mbcj" path="res://Assets/Miscellaneous/items and trap_animation/torch/candlestick_1_4.png" id="30_pftuu"]
 [ext_resource type="Texture2D" uid="uid://cijtllijsrcqr" path="res://Assets/Miscellaneous/items and trap_animation/torch/candlestick_2_1.png" id="31_kqgt0"]
@@ -268,6 +269,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xagnb"]
+size = Vector2(30, 9)
+
 [node name="Node2D" type="Node2D" unique_id=541352945]
 
 [node name="masterMap" type="TileMapLayer" parent="." unique_id=2031170306]
@@ -337,4 +341,23 @@ position = Vector2(174, 43)
 position = Vector2(320, 489)
 
 [node name="Dungeon" type="Marker2D" parent="." unique_id=446250122]
-position = Vector2(0, 97)
+position = Vector2(0, 102)
+
+[node name="ExitHome" type="Area2D" parent="." unique_id=1865180117 node_paths=PackedStringArray("target")]
+script = ExtResource("28_wt180")
+target = NodePath("../Dungeon")
+
+[node name="boundary" type="CollisionShape2D" parent="ExitHome" unique_id=1090321936]
+position = Vector2(320, 474.5)
+shape = SubResource("RectangleShape2D_xagnb")
+
+[node name="ExitDungeon" type="Area2D" parent="." unique_id=1874351011 node_paths=PackedStringArray("target")]
+script = ExtResource("28_wt180")
+target = NodePath("../Home")
+
+[node name="boundary" type="CollisionShape2D" parent="ExitDungeon" unique_id=2071342576]
+position = Vector2(0, 122)
+shape = SubResource("RectangleShape2D_xagnb")
+
+[connection signal="body_entered" from="ExitHome" to="ExitHome" method="_on_body_entered"]
+[connection signal="body_entered" from="ExitDungeon" to="ExitDungeon" method="_on_body_entered"]
