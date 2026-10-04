@@ -17,7 +17,7 @@ position = Vector2(182.66667, 53.33333)
 scale = Vector2(0.8, 0.8)
 
 [node name="Vampire" parent="." unique_id=2078070 instance=ExtResource("3_uuxpa")]
-position = Vector2(249, 129.33334)
+position = Vector2(210.66666, 148.66667)
 health = 40
 speed = 45.0
 attackCooldown = 1.5
