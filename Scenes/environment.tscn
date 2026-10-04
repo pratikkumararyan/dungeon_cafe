@@ -184,7 +184,7 @@ tile_set = SubResource("TileSet_6b2n3")
 position = Vector2(-54, -14)
 
 [node name="Vampire" parent="." unique_id=2078070 instance=ExtResource("3_a65fu")]
-position = Vector2(178, 18)
+position = Vector2(0, 57)
 scale = Vector2(0.75, 0.75)
 
 [node name="spike" parent="." unique_id=772351167 instance=ExtResource("4_ukl56")]

@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 const SPEED = 150.0
-const JUMP_VELOCITY = -400.0
 
 var last_direction: Vector2 = Vector2.DOWN
 var attacking := false
@@ -10,6 +9,7 @@ var attacking := false
 @onready var attack_range: Area2D = $AttackRange
 
 var rangeBase: Vector2
+var inRange: Array[Node2D] = []
 
 func _ready() -> void:
 	rangeBase = attack_range.position
@@ -22,7 +22,11 @@ func _physics_process(delta: float) -> void:
 
 func _attack() -> void:
 	attacking = true
-	play_animation("attack", last_direction)
+	_play_animation("attack", last_direction)
+	
+	for h in inRange:
+		h.takeDamage(PlayerStats.attack_damage)
+	
 	$Cooldown.start()
 	await animated_sprite_2d.animation_finished
 	attacking = false
@@ -43,15 +47,15 @@ func _process_movement():
 	if not attacking:
 		_process_animation(last_direction)
 	
-	updateRangeOffset()
+	_updateRangeOffset()
 
 func _process_animation(direction: Vector2):
 	if velocity != Vector2.ZERO:
-		play_animation("run", direction)
+		_play_animation("run", direction)
 	else:
-		play_animation("idle", direction)
+		_play_animation("idle", direction)
 
-func play_animation(prefix: String, dir: Vector2) -> void:
+func _play_animation(prefix: String, dir: Vector2) -> void:
 	if dir.x != 0:
 		animated_sprite_2d.flip_h = dir.x < 0
 		animated_sprite_2d.play(prefix + "Right")
@@ -60,7 +64,7 @@ func play_animation(prefix: String, dir: Vector2) -> void:
 	elif dir.y > 0:
 		animated_sprite_2d.play(prefix + "Backward")
 
-func updateRangeOffset() -> void:
+func _updateRangeOffset() -> void:
 	var x := rangeBase.x
 	var y := rangeBase.y
 
@@ -74,3 +78,14 @@ func updateRangeOffset() -> void:
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if animated_sprite_2d.animation.begins_with("attack"):
 		attacking = false
+
+func _on_attack_range_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemy"):
+		inRange.append(body)
+		print("appended: ", body.name)
+	return
+
+func _on_attack_range_body_exited(body: Node2D) -> void:
+	if body.is_in_group("enemy"):
+		inRange.erase(body)
+		print("removed: ", body.name)
