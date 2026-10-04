@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://bdoc0ps1qexkn"]
 
 [ext_resource type="Texture2D" uid="uid://ckk2jsb3k5om7" path="res://Assets/UI/Life Bars/Big Bars/1.png" id="1_c3eba"]
+[ext_resource type="Script" uid="uid://cxktewgeqfe7g" path="res://Scripts/HUD.gd" id="1_nfm57"]
 [ext_resource type="Script" uid="uid://cpffkfwef8sst" path="res://Scripts/HUD/health_bar.gd" id="1_sd512"]
 [ext_resource type="Texture2D" uid="uid://p0clhyq4wdec" path="res://Assets/UI/Life Bars/Big Bars/3.png" id="2_g8s2e"]
 [ext_resource type="Texture2D" uid="uid://ctvx5wp0eil1g" path="res://Assets/UI/Life Bars/Colors/1.png" id="2_s3jbq"]
 [ext_resource type="Texture2D" uid="uid://b7btw6tuijk7k" path="res://Assets/UI/Life Bars/Big Bars/4.png" id="3_t385i"]
+[ext_resource type="Texture2D" uid="uid://c5k7vms6d6pnn" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_2_1.png" id="6_g8s2e"]
+[ext_resource type="Texture2D" uid="uid://b7loa3c2bb1ff" path="res://Assets/Miscellaneous/items and trap_animation/keys/keys_1_1.png" id="7_t385i"]
 
 [node name="HUD" type="Control" unique_id=716140095]
 layout_mode = 3
@@ -17,6 +20,7 @@ offset_right = -1.0
 offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nfm57")
 
 [node name="Health" type="Control" parent="." unique_id=1822250082]
 anchors_preset = 0
@@ -48,3 +52,45 @@ value = 100.0
 nine_patch_stretch = true
 texture_progress = ExtResource("2_s3jbq")
 script = ExtResource("1_sd512")
+
+[node name="Silver Key" type="Control" parent="." unique_id=1975371511]
+anchors_preset = 0
+offset_left = 11.0
+offset_top = 33.0
+offset_right = 12.0
+offset_bottom = 33.0
+metadata/_edit_group_ = true
+
+[node name="Front" type="Sprite2D" parent="Silver Key" unique_id=1213707979]
+rotation = -1.5707964
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_g8s2e")
+
+[node name="Count" type="RichTextLabel" parent="Silver Key" unique_id=1280869637]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -13.0
+offset_right = 94.0
+offset_bottom = 10.0
+text = "100"
+
+[node name="Gold Key" type="Control" parent="." unique_id=1800823765]
+anchors_preset = 0
+offset_left = 12.0
+offset_top = 53.0
+offset_right = 13.0
+offset_bottom = 53.0
+metadata/_edit_group_ = true
+
+[node name="Front" type="Sprite2D" parent="Gold Key" unique_id=1273919837]
+rotation = -1.5707964
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_t385i")
+
+[node name="Count" type="RichTextLabel" parent="Gold Key" unique_id=1056980741]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -13.0
+offset_right = 94.0
+offset_bottom = 10.0
+text = "100"

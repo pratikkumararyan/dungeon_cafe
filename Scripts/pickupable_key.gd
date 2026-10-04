@@ -10,12 +10,16 @@ func _ready() -> void:
 		animated_sprite_2d.play("goldKey")
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("pPickup") and playerInRange:
-		queue_free()
-
+	pass
+	
 func _on_range_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		playerInRange =  true
+		if isGold:
+			PlayerStats.gold_keys += 1
+		else:
+			PlayerStats.silver_keys += 1
+		queue_free()
 
 func _on_range_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
