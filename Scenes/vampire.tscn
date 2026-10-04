@@ -1239,6 +1239,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_djr8b"]
 size = Vector2(10, 18)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xagnb"]
+radius = 40.012497
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o01uv"]
+radius = 66.37017
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2078070 groups=["enemy"]]
 collision_mask = 3
 script = ExtResource("1_te72b")
@@ -1248,8 +1254,21 @@ sprite_frames = SubResource("SpriteFrames_1vivr")
 animation = &"hitBackward"
 autoplay = "idleBackward"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1491612501 groups=["enemy"]]
+[node name="hitbox" type="CollisionShape2D" parent="." unique_id=1491612501 groups=["enemy"]]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_djr8b")
 
 [node name="Blood Particle Effect" parent="." unique_id=596861889 instance=ExtResource("7_2tffl")]
+
+[node name="innerRange" type="Area2D" parent="." unique_id=1846576859]
+
+[node name="radi" type="CollisionShape2D" parent="innerRange" unique_id=714120040]
+shape = SubResource("CircleShape2D_xagnb")
+
+[node name="outerRange" type="Area2D" parent="." unique_id=1035212298]
+
+[node name="radi" type="CollisionShape2D" parent="outerRange" unique_id=871932905]
+shape = SubResource("CircleShape2D_o01uv")
+
+[connection signal="body_entered" from="innerRange" to="." method="_on_inner_range_body_entered"]
+[connection signal="body_exited" from="outerRange" to="." method="_on_outer_range_body_exited"]

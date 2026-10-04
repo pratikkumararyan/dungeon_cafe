@@ -82,10 +82,10 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 func _on_attack_range_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
 		inRange.append(body)
-		print("appended: ", body.name)
+		#print("appended: ", body.name)
 	return
 
 func _on_attack_range_body_exited(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
 		inRange.erase(body)
-		print("removed: ", body.name)
+		#print("removed: ", body.name)

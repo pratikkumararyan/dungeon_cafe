@@ -3,23 +3,27 @@ extends CharacterBody2D
 @export var health := 100
 const KNOCKBACK_DISTANCE := 40.0
 
-var last_direction: Vector2 = Vector2.DOWN
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-
 var dead := false
 
+var last_direction: Vector2 = Vector2.DOWN
+var target: Node2D = null
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
 func _process(delta: float) -> void:
+	if dead:
+		return
+		
 	if velocity != Vector2.ZERO:
 		if abs(velocity.x) > abs(velocity.y):
 			last_direction = Vector2(sign(velocity.x), 0)
 		else:
 			last_direction = Vector2(0, sign(velocity.y))
-
+			
 	if health <= 0:
 		dead = true
 		_playAnimation("die")
 		await animated_sprite_2d.animation_finished
-		queue_free()			
+		queue_free()
 
 func takeDamage(amount: int, attacker_position: Vector2) -> void:
 	if !dead:
@@ -44,3 +48,14 @@ func _playAnimation(name: String) -> void:
 			Vector2.DOWN: animated_sprite_2d.play(name + "Backward")
 			Vector2.LEFT: animated_sprite_2d.play(name + "Left")
 			Vector2.RIGHT: animated_sprite_2d.play(name + "Right")
+
+
+func _on_inner_range_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		target = body
+		#print ("Player found!")
+
+func _on_outer_range_body_exited(body: Node2D) -> void:
+	if body.name == "Player" and target != null:
+		target = null
+		#print ("Player lost!")
