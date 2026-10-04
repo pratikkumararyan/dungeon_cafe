@@ -4,14 +4,13 @@ enum State { IDLE, CHASE, ATTACK, HIT, DEAD }
 
 @export var health := 100
 @export var speed := 30.0
-@export var attackRange := 60.0
+@export var attackRange := 100.0
 @export var attackCooldown := 2.0
 @export var attackDamage := 10
 const KNOCKBACK_DISTANCE := 50.0
 
 const ATTACK_RAY_COUNT := 100
-const ATTACK_SPREAD_DEGREES := 60.0
-var ATTACK_RAY_LENGTH := 100.0
+const ATTACK_SPREAD_DEGREES := 140.0
 
 var state := State.IDLE
 var last_direction: Vector2 = Vector2.DOWN
@@ -28,6 +27,8 @@ func _ready() -> void:
 	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
 
 func _physics_process(delta: float) -> void:
+	queue_redraw()
+	
 	if state == State.DEAD or state == State.HIT or state == State.ATTACK:
 		return
 
@@ -57,6 +58,18 @@ func _physics_process(delta: float) -> void:
 		state = State.IDLE
 		_playAnimation("idle")
 
+func _draw() -> void:
+	if state != State.ATTACK:
+		return
+
+	var spreadRadians = deg_to_rad(ATTACK_SPREAD_DEGREES)
+
+	for i in ATTACK_RAY_COUNT:
+		var t = float(i) / (ATTACK_RAY_COUNT - 1)
+		var angle = lerp(-spreadRadians / 2.0, spreadRadians / 2.0, t)
+		var rayDirection = last_direction.rotated(angle)
+		draw_line(Vector2.ZERO, rayDirection * (attackRange / 2), Color.GHOST_WHITE, 1.0)
+		
 var attackId := 0
 func _attack() -> void:
 	state = State.ATTACK
@@ -74,6 +87,7 @@ func _attack() -> void:
 		target.takeDamage(attackDamage)
 
 	state = State.IDLE
+	
 
 func _isTargetInFront() -> bool:
 	var spaceState = get_world_2d().direct_space_state
@@ -83,7 +97,7 @@ func _isTargetInFront() -> bool:
 		var t = float(i) / (ATTACK_RAY_COUNT - 1)
 		var angle = lerp(-spreadRadians / 2.0, spreadRadians / 2.0, t)
 		var rayDirection = last_direction.rotated(angle)
-		var rayEnd = global_position + rayDirection * ATTACK_RAY_LENGTH
+		var rayEnd = global_position + rayDirection * attackRange
 
 		var query = PhysicsRayQueryParameters2D.create(global_position, rayEnd)
 		query.exclude = [get_rid()]
