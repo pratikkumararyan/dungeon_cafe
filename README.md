@@ -17,7 +17,16 @@ Right now, the game has a few basic systems working:
 
 Nothing too crazy yet, but it's a start. I'll keep adding stuff as I work on it.
 
-## How to Run
+## Project screnshots
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d998a49f-e1a6-45b1-b5f4-6cd0b7947934" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5e47ff04-b13c-4602-85c5-dd634032d8d2" />
+
+
+## How to Play
+
+Find the game [on itch!](https://faizeenhoque.itch.io/dungeon-cafe)
+
+## How to run locally
 
 You'll need Godot 4.7 to open the project.
 
