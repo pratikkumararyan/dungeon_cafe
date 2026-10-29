@@ -6,6 +6,10 @@ Dungeon Cafe is a dungeon-themed game where you can move around, fight enemies, 
 
 I'm mostly making this to mess around with game development, learn how things work, and hopefully turn it into something actually fun to play :))
 
+## How to Play
+
+Find the game [on itch!](https://faizeenhoque.itch.io/dungeon-cafe)
+
 ## Gameplay
 
 Right now, the game has a few basic systems working:
@@ -22,9 +26,6 @@ Nothing too crazy yet, but it's a start. I'll keep adding stuff as I work on it.
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5e47ff04-b13c-4602-85c5-dd634032d8d2" />
 
 
-## How to Play
-
-Find the game [on itch!](https://faizeenhoque.itch.io/dungeon-cafe)
 
 ## How to run locally
 
