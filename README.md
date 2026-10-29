@@ -14,8 +14,8 @@ Find the game [on itch!](https://faizeenhoque.itch.io/dungeon-cafe)
 
 Right now, the game has a few basic systems working:
 
-- Player movement
-- Attacking and combat
+- Player movement **(WASD keys)**
+- Attacking and combat **(Spacebar)**
 - Enemies
 - Item pickups
 
