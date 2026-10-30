@@ -1,5 +1,7 @@
 # Dungeon Cafe
 
+**NOTE: if you are a 3am reviewer, the. do remember that this is a group project and only Fynr1x or FaizeenHoque's 7h or so have been submitted to 3am, not pratikkumararyan**
+
 A little game I've been working on in Godot :D
 
 Dungeon Cafe is a dungeon-themed game where you can move around, fight enemies, and pick up items. It's still pretty early in development, so there's a lot I wanna add and improve, but the basic gameplay systems are coming together.
